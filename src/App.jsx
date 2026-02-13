@@ -24,7 +24,7 @@ const App = () => {
       setLoading(true);
 
       const res = await fetch(
-        `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&page=${page}`
+        `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&page=${page}`
       );
       const data = await res.json();
       setMovies(data.results);
